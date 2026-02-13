@@ -1,0 +1,60 @@
+{
+  "VsCodeTaskButtons.showCounter": true,
+  "VsCodeTaskButtons.tasks": [
+    {
+      "label": "$(tools) Build",
+      "tasks": [
+        {
+          "label": "$(tools) SUSHI Build",
+          "task": "SUSHI: Build FSH",
+          "description": "Build FSH files with SUSHI"
+        },
+        {
+          "label": "$(package) Full Build",
+          "task": "IG Publisher: Full Build",
+          "description": "Run complete IG Publisher build"
+        },
+        {
+          "label": "$(cloud-download) Update Publisher",
+          "task": "Update IG Publisher",
+          "description": "Update IG Publisher to latest version"
+        },
+        {
+          "label": "$(archive) Download Dependencies",
+          "task": "FHIR Package: Download and Snapshot Dependencies",
+          "description": "Download and snapshot FHIR package dependencies"
+        }
+      ],
+      "tooltip": "Build & Update Tasks"
+    },
+    {
+      "label": "$(globe) Serve IG",
+      "task": "Serve IG Locally",
+      "tooltip": "Serve IG locally on port 8080"
+    },
+    {
+      "label": "$(git-commit) Commit",
+      "task": "Git: Commit Changes",
+      "tooltip": "Änderungen committen (speichert alle Dateien)"
+    },
+    {
+      "label": "$(cloud-download) Download",
+      "tasks": [
+        {
+          "label": "$(file-zip) Download IG",
+          "task": "Download: IG Package",
+          "description": "Download full-ig.zip aus output/"
+        },
+        {
+          "label": "$(file-code) Download JSON Files",
+          "task": "Download: JSON Resources",
+          "description": "JSON-Dateien aus fsh-generated/resources als ZIP"
+        }
+      ],
+      "tooltip": "Download Build-Artefakte"
+    }
+  ],
+  "github.copilot.chat.startupMessage": false,
+  "github.copilot.chat.welcomeMessage": "never",
+  "workbench.secondarySideBar.defaultVisibility": "hidden"
+}

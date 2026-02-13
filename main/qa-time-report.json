@@ -1,0 +1,185 @@
+{
+  "date" : "Fri, 13 Feb, 2026 09:27:52 +0000",
+  "doco" : "For each file: start is seconds after start activity occurred. Length = milliseconds activity took",
+  "files" : [
+    {
+      "name" : "/fsh-generated/resources/ImplementationGuide-info.gefyra.training.json",
+      "size" : 1518,
+      "processes" : [
+        {
+          "activity" : "load",
+          "start" : 63,
+          "length" : 32
+        },
+        {
+          "activity" : "checkR4R4B",
+          "start" : 65,
+          "length" : 14
+        },
+        {
+          "activity" : "generateNarratives",
+          "start" : 65,
+          "length" : 114
+        },
+        {
+          "activity" : "validate",
+          "start" : 67,
+          "length" : 3339
+        },
+        {
+          "activity" : "generate1",
+          "start" : 70,
+          "length" : 103
+        },
+        {
+          "activity" : "generate2",
+          "start" : 73,
+          "length" : 84
+        },
+        {
+          "activity" : "generateValidationPack",
+          "start" : 81,
+          "length" : 2
+        },
+        {
+          "activity" : "scanExamplesForR5",
+          "start" : 87,
+          "length" : 2
+        }
+      ]
+    },
+    {
+      "name" : "fsh-generated/resources/Patient-PatientExample.json",
+      "size" : 258,
+      "processes" : [
+        {
+          "activity" : "loadResources",
+          "start" : 63,
+          "length" : 19
+        },
+        {
+          "activity" : "load-configure",
+          "start" : 65,
+          "length" : 1
+        },
+        {
+          "activity" : "checkR4R4B",
+          "start" : 65,
+          "length" : 1
+        },
+        {
+          "activity" : "generateNarratives",
+          "start" : 65,
+          "length" : 5
+        },
+        {
+          "activity" : "validate",
+          "start" : 70,
+          "length" : 5
+        },
+        {
+          "activity" : "generate1",
+          "start" : 70,
+          "length" : 18
+        },
+        {
+          "activity" : "generate2",
+          "start" : 73,
+          "length" : 23
+        }
+      ]
+    },
+    {
+      "name" : "fsh-generated/resources/StructureDefinition-MyPatient.json",
+      "size" : 606,
+      "processes" : [
+        {
+          "activity" : "loadResources",
+          "start" : 63,
+          "length" : 20
+        },
+        {
+          "activity" : "load",
+          "start" : 63,
+          "length" : 20
+        },
+        {
+          "activity" : "generateSnapshots",
+          "start" : 63,
+          "length" : 101
+        },
+        {
+          "activity" : "generateNarratives",
+          "start" : 65,
+          "length" : 130
+        },
+        {
+          "activity" : "validate",
+          "start" : 65,
+          "length" : 1323
+        },
+        {
+          "activity" : "scanForUsageStats",
+          "start" : 70,
+          "length" : 1
+        },
+        {
+          "activity" : "generate1",
+          "start" : 70,
+          "length" : 208
+        },
+        {
+          "activity" : "generate2",
+          "start" : 73,
+          "length" : 1355
+        },
+        {
+          "activity" : "generate2",
+          "start" : 74,
+          "length" : 1671
+        },
+        {
+          "activity" : "generateValidationPack",
+          "start" : 81,
+          "length" : 9
+        },
+        {
+          "activity" : "scanExamplesForR5",
+          "start" : 87,
+          "length" : 2
+        }
+      ]
+    },
+    {
+      "name" : "/fsh-generated/includes/menu.xml",
+      "size" : 1043
+    },
+    {
+      "name" : "/fsh-generated/includes/fsh-link-references.md",
+      "size" : 93
+    },
+    {
+      "name" : "/input/pagecontent/index.md",
+      "size" : 81
+    },
+    {
+      "name" : "/template/config",
+      "size" : 0,
+      "processes" : [
+        {
+          "activity" : "generate2",
+          "start" : 74,
+          "length" : 1
+        }
+      ]
+    },
+    {
+      "name" : "/template/config/_config.yml",
+      "size" : 140
+    },
+    {
+      "name" : "/temp/pages/_includes/artifacts.xml",
+      "size" : 2128
+    }
+  ]
+}

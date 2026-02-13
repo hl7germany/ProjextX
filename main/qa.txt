@@ -1,0 +1,20 @@
+SchulungsIG : Validation Results
+=========================================
+
+err = 0, warn = 4, info = 1
+IG Publisher Version: 2.1.0
+Generated Fri Feb 13 09:29:20 UTC 2026. FHIR version 4.0.1 for info.gefyra.training#0.1.0 (canonical = http://gefyra.info/training)
+ Build Errors : 0 / 4 / 0
+ /__w/ProjextX/ProjextX/fsh-generated/resources/ImplementationGuide-info.gefyra.training : 0 / 0 / 1
+ /__w/ProjextX/ProjextX/fsh-generated/resources/Patient-PatientExample : 0 / 0 / 1
+ /__w/ProjextX/ProjextX/fsh-generated/resources/StructureDefinition-MyPatient : 0 / 0 / 2
+</table>
+== n/a ==
+WARNING: 1: The HTML fragment 'ip-statements.xhtml' is not included anywhere in the produced implementation guide
+WARNING: 2: An HTML fragment from the set [cross-version-analysis.xhtml, cross-version-analysis-inline.xhtml] is not included anywhere in the produced implementation guide
+WARNING: 3: An HTML fragment from the set [dependency-table.xhtml, dependency-table-short.xhtml, dependency-table-nontech.xhtml] is not included anywhere in the produced implementation guide
+WARNING: 4: The HTML fragment 'globals-table.xhtml' is not included anywhere in the produced implementation guide
+== fsh-generated/resources/ImplementationGuide-info.gefyra.training.json ==
+== fsh-generated/resources/Patient-PatientExample.json ==
+== fsh-generated/resources/StructureDefinition-MyPatient.json ==
+INFORMATION: StructureDefinition/MyPatient: StructureDefinition.snapshot.element[4].binding.extension[0]: The extension http://hl7.org/fhir/StructureDefinition/elementdefinition-maxValueSet|5.2.0 is deprecated

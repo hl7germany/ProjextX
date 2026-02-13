@@ -26,7 +26,7 @@ Feel free to modify this index page with your own awesome content!
   "version" : "0.1.0",
   "name" : "SchulungsIG",
   "status" : "draft",
-  "date" : "2026-02-13T09:27:52+00:00",
+  "date" : "2026-02-13T10:55:57+00:00",
   "publisher" : "Gefyra GmbH",
   "contact" : [
     {

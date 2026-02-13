@@ -40,7 +40,7 @@ Other representations of profile: [CSV](StructureDefinition-MyPatient.csv), [Exc
   "version" : "0.1.0",
   "name" : "MyPatient",
   "status" : "draft",
-  "date" : "2026-02-13T09:27:52+00:00",
+  "date" : "2026-02-13T10:55:57+00:00",
   "publisher" : "Gefyra GmbH",
   "contact" : [
     {
@@ -97,6 +97,72 @@ Other representations of profile: [CSV](StructureDefinition-MyPatient.csv), [Exc
         "id" : "Patient.name",
         "path" : "Patient.name",
         "min" : 1,
+        "mustSupport" : true
+      },
+      {
+        "id" : "Patient.name.family",
+        "extension" : [
+          {
+            "extension" : [
+              {
+                "url" : "code",
+                "valueCode" : "SHALL:populate-if-known"
+              },
+              {
+                "url" : "actor",
+                "valueCanonical" : "http://fhir.de/base/ActorDefinition/Creator"
+              }
+            ],
+            "url" : "http://hl7.org/fhir/StructureDefinition/obligation"
+          },
+          {
+            "extension" : [
+              {
+                "url" : "code",
+                "valueCode" : "SHALL:handle"
+              },
+              {
+                "url" : "actor",
+                "valueCanonical" : "http://fhir.de/base/ActorDefinition/Consumer"
+              }
+            ],
+            "url" : "http://hl7.org/fhir/StructureDefinition/obligation"
+          }
+        ],
+        "path" : "Patient.name.family",
+        "mustSupport" : true
+      },
+      {
+        "id" : "Patient.name.given",
+        "extension" : [
+          {
+            "extension" : [
+              {
+                "url" : "code",
+                "valueCode" : "SHOULD:populate-if-known"
+              },
+              {
+                "url" : "actor",
+                "valueCanonical" : "http://fhir.de/base/ActorDefinition/Creator"
+              }
+            ],
+            "url" : "http://hl7.org/fhir/StructureDefinition/obligation"
+          },
+          {
+            "extension" : [
+              {
+                "url" : "code",
+                "valueCode" : "SHOULD:handle"
+              },
+              {
+                "url" : "actor",
+                "valueCanonical" : "http://fhir.de/base/ActorDefinition/Consumer"
+              }
+            ],
+            "url" : "http://hl7.org/fhir/StructureDefinition/obligation"
+          }
+        ],
+        "path" : "Patient.name.given",
         "mustSupport" : true
       }
     ]

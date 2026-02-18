@@ -35,8 +35,8 @@ Description: "Dieses Profil spezifiziert die Minimalanforderungen für die Berei
   * ^slicing.discriminator[=].path = "system"
   * ^slicing.rules = #open
 * identifier contains
-    pid 0..* MS and
-    versichertenId 0..1 MS and
+    pid 0..* and
+    versichertenId 0..1 and
     versichertennummer_pkv 0..1 and
     reisepassnummer 0..* and
     versichertennummer_kvk 0..1
@@ -132,7 +132,7 @@ Description: "Dieses Profil spezifiziert die Minimalanforderungen für die Berei
   * ^definition = "Hier wird die Reisepassnummer angegeben."
 * identifier[versichertennummer_kvk] only DatatypeIdentifierKVKDeCore
   * ^definition = "Hier wird die Versichertennummer der Krankenversichertenkarte (KVK) angegeben."
-* active MS
+* active
   * ^short = "Status des Datensatzes"
   * ^definition = "
   `true` = Der Datensatz befindet sich in Verwendung/kann verwendet werden  
@@ -152,7 +152,7 @@ Description: "Dieses Profil spezifiziert die Minimalanforderungen für die Berei
   * ^slicing.discriminator.path = "use"
   * ^slicing.rules = #open
 * name contains
-    name 0..1 MS and
+    name 0..1 and
     geburtsname 0..1
 * name[name] only https://fhir.prototype.de/StructureDefinition/DatatypeNameDeCore|0.1.0
   * ^short = "Offizieller Name"
@@ -166,14 +166,14 @@ Description: "Dieses Profil spezifiziert die Minimalanforderungen für die Berei
   * ^short = "Geburtsname"
   * ^definition = "Hier wird daer Familienname zum Zeitpunkt der Geburt angegeben, sofern abweichend vom offiziellen Namen."
 * telecom only https://fhir.prototype.de/StructureDefinition/DatatypeContactpointDeCore|0.1.0
-* telecom MS
+* telecom
   * ^short = "Angabe der Kontaktdaten"
   * ^definition = "Dieses Element beschreibt die vorhandenen Kontaktmöglichkeiten des Patienten, z.B. Telefonnummer oder E-Mail-Adresse.."
   * ^comment = "**Begründung Obligation:** Kontaktdaten sind im Kontext der Terminplanung unerlässlich, z.B. für Terminvereinbarungen oder Rückfragen. Das Must-Support gilt ausschließlich für Systeme, die
   Kontaktdaten persistieren."
   * insert obligation(#SHALL:populate-if-known, $creator-isik)
   * insert obligation(#SHOULD:handle, $consumer-isik)
-* gender 0..1 MS
+* gender 0..1
   * ^short = "Administratives Geschlecht" 
   * ^definition = "Hier wird die Geschlechtsdefinition nach den Versichertenstammdaten (VSD) angegeben. Für die Geschlechtskennzeichen 'unbestimmt' und 'divers' ist der international vereinbarte code `other` zu verwenden.
     Zur weiteren Differenzierung kann dann die Extension `Geschlecht-Admnistrativ` verwendet werden.
@@ -193,7 +193,7 @@ Description: "Dieses Profil spezifiziert die Minimalanforderungen für die Berei
     * ^short = "Extension zur Differenzierung des Geschlechtskennzeichens"
     * ^comment = "Diese Extension darf nur in Verbindung mit dem Geschlechtskennzeichen `other` verwendet werden
       und dient der Differenzierung zwischen den in Deutschland möglichen Geschlechtskennzeichen `D` (divers) und `X`(unbestimmt)"
-* deceased[x] MS
+* deceased[x]
   * ^comment = " Die Implementierung dieses Elements ist für Server optional. Die Kennzeichnung als Must-Support erfolgt, da es sich um ein als Modifier-Element markiertes Feld in der Kernspezifikation handelt. 
     **WICHTIGER Hinweis für Implementierer:**  
   * Alle server-seitigen Implementierungen SOLLEN in der Lage sein, die systemintern möglichen Statuswerte korrekt in FHIR abzubilden.
@@ -251,7 +251,7 @@ Description: "Dieses Profil spezifiziert die Minimalanforderungen für die Berei
   * ^short = "Bevorzugte Sprache"
   * ^definition = "Hier werden Sprachen angegeben, die zur Kommunikation mit der behandelten Person über medizinische Themen verwendet werden können."
 * generalPractitioner ^short = "Patient's nominated primary care provider."
-* link MS
+* link
   * ^short = "Link"
   * ^comment = "**Begründung Obligation**: Dieses und untergeordnete Elemente KÖNNEN bei einem erfolgten Patient merge entsprechend der Festlegungen unter {{pagelink:Patient-merge}} befüllt werden. 
   Da das Element der Unterstützung der Patient merge Notification dient, 

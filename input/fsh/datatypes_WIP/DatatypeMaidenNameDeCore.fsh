@@ -26,15 +26,24 @@ Description: "Dieses Profil bildet den Geburtsnamen einer Person mit den in Deut
   * extension ^slicing.discriminator.path = "url"
   * extension ^slicing.rules = #open
   * extension ^min = 0
-  * extension[namenszusatz] 0..1
+  * extension[namenszusatz] 0..1 MS
     * ^short = "Namenszusatz"
     * ^definition = "Enthält ehem. Adelstitel wie z.B. 'Graf', 'Baronesse', 'Freiherr'..."
-  * extension[nachname] 0..1
+    * ^comment = "**Begründung Obligation:** Erforderlich für die verlustfreie Kommunikation von VSDM-Daten."
+    * insert obligation(#SHALL:populate, $creator-isik)
+    * insert obligation(#SHALL:handle, $consumer-isik)
+  * extension[nachname] 0..1 MS
     * ^short = "Nachname"
     * ^definition = "Nachname ohne Vor- und Zusätze."   
-  * extension[vorsatzwort] 0..1
+    * ^comment = "**Begründung Obligation:** Erforderlich für die verlustfreie Kommunikation von VSDM-Daten."
+    * insert obligation(#SHALL:populate, $creator-isik)
+    * insert obligation(#SHALL:handle, $consumer-isik)
+  * extension[vorsatzwort] 0..1 MS
     * ^short = "Vorsatzwort"
     * ^definition = "Enthält Vorsätze, die vor dem Nachnamen stehen, z.B. 'von', 'van', 'zu'..."  
+    * ^comment = "**Begründung Obligation:** Erforderlich für die verlustfreie Kommunikation von VSDM-Daten."
+    * insert obligation(#SHALL:populate, $creator-isik)
+    * insert obligation(#SHALL:handle, $consumer-isik)
 * given ..0
   * ^short = "Given names. Includes middle names"
 * prefix ..0

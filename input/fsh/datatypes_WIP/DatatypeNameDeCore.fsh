@@ -25,27 +25,46 @@ Description: "Dieses Profil bildet den Geburtsnamen einer Person mit den in Deut
   * extension ^slicing.discriminator.path = "url"
   * extension ^slicing.rules = #open
   * extension ^min = 0
-  * extension[namenszusatz] 0..1
+  * extension[namenszusatz] 0..1 MS
     * ^short = "Namenszusatz"
     * ^definition = "Enthält ehem. Adelstitel wie z.B. 'Graf', 'Baronesse', 'Freiherr'..."
-  * extension[nachname] 0..1
+    * ^comment = "**Begründung Obligation:** Erforderlich für die verlustfreie Kommunikation von VSDM-Daten."
+    * insert obligation(#SHALL:populate, $creator-isik)
+    * insert obligation(#SHALL:handle, $consumer-isik)
+  * extension[nachname] 0..1 MS
     * ^short = "Nachname"
     * ^definition = "Nachname ohne Vor- und Zusätze."   
-  * extension[vorsatzwort] 0..1
+    * ^comment = "**Begründung Obligation:** Erforderlich für die verlustfreie Kommunikation von VSDM-Daten."
+    * insert obligation(#SHALL:populate, $creator-isik)
+    * insert obligation(#SHALL:handle, $consumer-isik)
+  * extension[vorsatzwort] 0..1 MS
     * ^short = "Vorsatzwort"
     * ^definition = "Enthält Vorsätze, die vor dem Nachnamen stehen, z.B. 'von', 'van', 'zu'..."    
-* given 0..*
+    * ^comment = "**Begründung Obligation:** Erforderlich für die verlustfreie Kommunikation von VSDM-Daten."
+    * insert obligation(#SHALL:populate, $creator-isik)
+    * insert obligation(#SHALL:handle, $consumer-isik)
+* given 0..* MS
   * ^short = "Vorname"
   * ^definition = "Kann mehrfach verwendet werden, um den Rufnamen sowie weitere Vornamen, Mittelnamen oder Mittel-Initialen abzubilden." 
+  * ^comment = "**Begründung Obligation:** Ein offizieller Name ist nur zulässig, wenn der Nachname und mindestens ein Vorname angegeben sind."
+  * insert obligation(#SHALL:populate, $creator-isik)
+  * insert obligation(#SHALL:handle, $consumer-isik)
+  * insert obligation(#SHALL:populate, $creator-ti-common)
+  * insert obligation(#SHALL:handle, $consumer-ti-common)
 * prefix
   * ^short = "Präfix"
-  * ^comment = "Präfix, z.B. akademischer Titel od. militärischer Rang"
+  * ^definition = "Präfix, z.B. akademischer Titel od. militärischer Rang"
   * extension ^slicing.discriminator.type = #value
   * extension ^slicing.discriminator.path = "url"
   * extension ^slicing.rules = #open
-  * extension[prefix-qualifier] 0..1
+  * extension[prefix-qualifier] 0..1 MS
+  * ^comment = "**Begründung Obligation:** Erforderlich für die verlustfreie Kommunikation von VSDM-Daten"
+  * insert obligation(#SHALL:populate-if-known, $creator-kbv)
+  * insert obligation(#SHALL:handle, $consumer-kbv)
+  * insert obligation(#SHOULD:populate-if-known, $creator-isik)
+  * insert obligation(#SHOULD:handle, $consumer-isik)
   * extension[prefix-qualifier] ^short = "Extension, um das Präfix als akademischen Titel zu qualifizieren"
-    * ^comment = "Hier ist stets der Wert `AC` anzugeben."    
+    * ^definition = "Hier ist stets der Wert `AC` anzugeben."    
     * value[x] ^slicing.discriminator.type = #type
     * value[x] ^slicing.discriminator.path = "$this"
     * value[x] ^slicing.rules = #open

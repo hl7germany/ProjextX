@@ -30,17 +30,28 @@ Description: "This profile extends the Address data type for supporting streetna
   * extension[Strasse] 0..0
   * extension[Hausnummer] 0..0
   * extension[Adresszusatz] 0..0
-  * extension[Postfach] 0..1
+  * extension[Postfach] 0..1 MS
     * ^short = "Postfachnummer"
     * ^definition = "Postfach-Adresse. Bei Angabe eines Postfaches in dieser Extension muss das Postfach auch in Address.line angegeben werden,
       um die Interoperabilität mit Systemen zu gewährleisten, die diese Extension nicht verwenden. 
-      Eine Postfach-Adresse darf nicht in Verbindung mit Address.type `physical` oder `both` verwendet werden.  
-      **Begründung:** Erforderlich für die verlustfreie Kommunikation von VSDM-Daten."
-* city 
+      Eine Postfach-Adresse darf nicht in Verbindung mit Address.type `physical` oder `both` verwendet werden."
+    * ^comment = "**Begründung Obligation:** Erforderlich für die verlustfreie Kommunikation von VSDM-Daten."
+    * insert obligation(#SHALL:populate, $creator-isik)
+    * insert obligation(#SHALL:handle, $consumer-isik)
+* city MS 
   * ^short = "Stadt"
-* postalCode
+  * ^comment = "**Begründung Obligation:** Ohne diese Angabe ist die Adresse nicht zustellbar."
+  * insert obligation(#SHALL:populate, $creator-isik)
+  * insert obligation(#SHALL:handle, $consumer-isik)
+* postalCode MS
   * ^short = "Postleitzahl"
-* country
+  * ^comment = "**Begründung Obligation:** Ohne diese Angabe ist die Adresse nicht zustellbar."
+  * insert obligation(#SHALL:populate, $creator-isik)
+  * insert obligation(#SHALL:handle, $consumer-isik)
+* country MS
   * ^short = "Land"
+  * ^comment = "**Begründung Obligation:** Ohne diese Angabe ist die Adresse nicht zustellbar."
+  * insert obligation(#SHALL:populate, $creator-isik)
+  * insert obligation(#SHALL:handle, $consumer-isik)
 //* country from $KBV_VS_Base_Deuev_Anlage_8 (extensible)
 //* country ^definition = "Angabe des Staates als Länderkennzeichen nach DEUEV Anlage 8."

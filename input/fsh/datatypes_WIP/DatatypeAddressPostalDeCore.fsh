@@ -30,7 +30,7 @@ Description: "This profile extends the Address data type for supporting streetna
   * extension[Strasse] 0..0
   * extension[Hausnummer] 0..0
   * extension[Adresszusatz] 0..0
-  * extension[Postfach] 0..1 MS
+  * extension[Postfach] 0..1
     * ^short = "Postfachnummer"
     * ^definition = "Postfach-Adresse. Bei Angabe eines Postfaches in dieser Extension muss das Postfach auch in Address.line angegeben werden,
       um die Interoperabilität mit Systemen zu gewährleisten, die diese Extension nicht verwenden. 
@@ -38,17 +38,17 @@ Description: "This profile extends the Address data type for supporting streetna
     * ^comment = "**Begründung Obligation:** Erforderlich für die verlustfreie Kommunikation von VSDM-Daten."
     * insert obligation(#SHALL:populate, $creator-isik)
     * insert obligation(#SHALL:handle, $consumer-isik)
-* city MS 
+* city
   * ^short = "Stadt"
   * ^comment = "**Begründung Obligation:** Ohne diese Angabe ist die Adresse nicht zustellbar."
   * insert obligation(#SHALL:populate, $creator-isik)
   * insert obligation(#SHALL:handle, $consumer-isik)
-* postalCode MS
+* postalCode
   * ^short = "Postleitzahl"
   * ^comment = "**Begründung Obligation:** Ohne diese Angabe ist die Adresse nicht zustellbar."
   * insert obligation(#SHALL:populate, $creator-isik)
   * insert obligation(#SHALL:handle, $consumer-isik)
-* country MS
+* country
   * ^short = "Land"
   * ^comment = "**Begründung Obligation:** Ohne diese Angabe ist die Adresse nicht zustellbar."
   * insert obligation(#SHALL:populate, $creator-isik)

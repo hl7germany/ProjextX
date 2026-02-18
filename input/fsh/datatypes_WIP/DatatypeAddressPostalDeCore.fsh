@@ -8,14 +8,14 @@ Description: "This profile extends the Address data type for supporting streetna
 * insert Meta
 * obeys postBox-de-1
 * obeys address-cnt-2or3-char
-* type 1.. MS
+* type 1..
   * ^short = "Adresstyp"
-  * ^comment = "Hier ist stets der Wert `postal` anzugeben.  
+  * ^definition = "Hier ist stets der Wert `postal` anzugeben.  
   **Begründung Pflichtfeld:** Dient als Unterscheidungs- und Auswahlkriterium" 
 * type = #postal
-* line MS
+* line
   * ^short = "Adresszeile"
-  * ^comment = "Diese Komponente enthält die Postfachadresse als String der Form 'Postfach: 12345'.
+  * ^definition = "Diese Komponente enthält die Postfachadresse als String der Form 'Postfach: 12345'.
   Bei Verwendung der Postfach-Extension, um die Postfachnummer strukturiert zu übermitteln, 
   müssen diese Informationen stets vollständig auch in der line-Komponente, 
   die sie erweitern, enthalten sein, um es Systemen, die diese Extensions nicht verwenden zu ermöglichen, 
@@ -30,20 +30,17 @@ Description: "This profile extends the Address data type for supporting streetna
   * extension[Strasse] 0..0
   * extension[Hausnummer] 0..0
   * extension[Adresszusatz] 0..0
-  * extension[Postfach] 0..1 MS
+  * extension[Postfach] 0..1
     * ^short = "Postfachnummer"
-    * ^comment = "Postfach-Adresse. Bei Angabe eines Postfaches in dieser Extension muss das Postfach auch in Address.line angegeben werden,
+    * ^definition = "Postfach-Adresse. Bei Angabe eines Postfaches in dieser Extension muss das Postfach auch in Address.line angegeben werden,
       um die Interoperabilität mit Systemen zu gewährleisten, die diese Extension nicht verwenden. 
       Eine Postfach-Adresse darf nicht in Verbindung mit Address.type `physical` oder `both` verwendet werden.  
-      **Begründung MS:** Erforderlich für die verlustfreie Kommunikation von VSDM-Daten."
-* city 0..1 MS
+      **Begründung:** Erforderlich für die verlustfreie Kommunikation von VSDM-Daten."
+* city 
   * ^short = "Stadt"
-  * ^comment = "**Begründung Pflichtfeld:** Ohne diese Angabe ist die Adresse nicht zustellbar."
-* postalCode 0..1 MS
+* postalCode
   * ^short = "Postleitzahl"
-  * ^comment = "**Begründung Pflichtfeld:** Ohne diese Angabe ist die Adresse nicht zustellbar."
-* country 0..1 MS
+* country
   * ^short = "Land"
-  * ^comment = "**Begründung Pflichtfeld:** Ohne diese Angabe ist die Adresse nicht zustellbar."
 //* country from $KBV_VS_Base_Deuev_Anlage_8 (extensible)
 //* country ^definition = "Angabe des Staates als Länderkennzeichen nach DEUEV Anlage 8."

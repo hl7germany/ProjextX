@@ -6,36 +6,35 @@ Description: "Dieses Profil bildet den Geburtsnamen einer Person mit den in Deut
 * . ^short = "Geburtsname"
 * . ^definition = "Geburtsname mit in Deutschland üblichen Erweiterungen"
 * insert Meta
-* use 1.. MS
+* use 1..
   * ^short = "Verwendungszweck"
-  * ^comment = "Hier ist stets der Wert `maiden` anzugeben.  
+  * ^definition = "Hier ist stets der Wert `maiden` anzugeben.  
     **Begründung Pflichtfeld:** Dient als Unterscheidungs- und Auswahlkriterium"  
 * use = #maiden
 * text ^short = "Vollständiger Name"
 * text ^definition = "Vollständiger Name mit Vornamen und allen Vorsatzwörtern und Namenszusätzen. Der vollständige Name soll alle Namensteile in ihrer korrekten Reihenfolge abbilden."
-* family 1.. MS
+* family 1..
   * ^short = "Nachname"
-  * ^comment = "Vollständiger Nachname bzw. Familienname des Patienten, einschließlich Vor- und Zusätze.  
+  * ^definition = "Vollständiger Nachname bzw. Familienname des Patienten, einschließlich Vor- und Zusätze.  
     **Begründung Pflichtfeld:** Ist der Nachname zum Zeitpunkt der Geburt nicht bekannt, sollte der gesamte Slice weggelassen werden."
-  * ^definition = "Family name. When more the family is composed of more than one name, this element documents the full composed family name with the proper name order. The parts are recorded in the father and mother family names extensions."
+// "The parts are recorded in the father and mother family names extensions."
+//Die hier benannten Extensions existieren weder im EU Core/Base Profil noch in den deutschen Profilen.
+//  * ^definition = "Family name. When more the family is composed of more than one name, this element documents the full composed family name with the proper name order. The parts are recorded in the father and mother family names extensions."
   * ^example.label = "spanish"
   * ^example.valueString = "Valero Iglesias"
   * extension ^slicing.discriminator.type = #value
   * extension ^slicing.discriminator.path = "url"
   * extension ^slicing.rules = #open
   * extension ^min = 0
-  * extension[namenszusatz] 0..1 MS
+  * extension[namenszusatz] 0..1
     * ^short = "Namenszusatz"
-    * ^comment = "Enthält ehem. Adelstitel wie z.B. 'Graf', 'Baronesse', 'Freiherr'...  
-      **Begründung MS:** Erforderlich für die verlustfreie Kommunikation von VSDM-Daten."
-  * extension[nachname] 0..1 MS
+    * ^definition = "Enthält ehem. Adelstitel wie z.B. 'Graf', 'Baronesse', 'Freiherr'..."
+  * extension[nachname] 0..1
     * ^short = "Nachname"
-    * ^comment = "Nachname ohne Vor- und Zusätze.  
-      **Begründung MS:** Erforderlich für die verlustfreie Kommunikation von VSDM-Daten."   
-  * extension[vorsatzwort] 0..1 MS
+    * ^definition = "Nachname ohne Vor- und Zusätze."   
+  * extension[vorsatzwort] 0..1
     * ^short = "Vorsatzwort"
-    * ^comment = "Enthält Vorsätze, die vor dem Nachnamen stehen, z.B. 'von', 'van', 'zu'...  
-      **Begründung MS:** Erforderlich für die verlustfreie Kommunikation von VSDM-Daten."  
+    * ^definition = "Enthält Vorsätze, die vor dem Nachnamen stehen, z.B. 'von', 'van', 'zu'..."  
 * given ..0
   * ^short = "Given names. Includes middle names"
 * prefix ..0

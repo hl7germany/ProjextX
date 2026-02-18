@@ -29,7 +29,7 @@ Description: "This profile extends the Address data type for supporting streetna
   * extension ^slicing.discriminator.path = "url"
   * extension ^slicing.rules = #open
   * extension ^min = 0
-  * extension[Strasse] 0..1 MS
+  * extension[Strasse] 0..1 
     * ^short = "Strassenname"
     * ^definition = "Strassenname (ohne Hausnummer).
       Bei Angabe einer Strasse in dieser Extension muss diese auch in Address.line angegeben werden,
@@ -37,7 +37,7 @@ Description: "This profile extends the Address data type for supporting streetna
     * ^comment = "**Begründung Obligation:** Erforderlich für die verlustfreie Kommunikation von VSDM-Daten."
     * insert obligation(#SHALL:populate, $creator-isik)
     * insert obligation(#SHALL:handle, $consumer-isik)
-  * extension[Hausnummer] 0..1 MS
+  * extension[Hausnummer] 0..1 
     * ^short = "Hausnummer"
     * ^definition = "Hausnummer, sowie Zusätze (Appartmentnummer, Etage...). 
       Bei Angabe einer Hausnummer in dieser Extension muss diese auch in Address.line angegeben werden,
@@ -45,7 +45,7 @@ Description: "This profile extends the Address data type for supporting streetna
     * ^comment = "**Begründung Obligation:** Erforderlich für die verlustfreie Kommunikation von VSDM-Daten."
     * insert obligation(#SHALL:populate, $creator-isik)
     * insert obligation(#SHALL:handle, $consumer-isik)
-  * extension[Adresszusatz] 0..1 MS
+  * extension[Adresszusatz] 0..1 
     * ^short = "Adresszusatz"
     * ^definition = "Zusätzliche Informationen, wie z.B. '3. Etage', 'Appartment C'.
       Bei Angabe einer Zusatzinformation in dieser Extension muss diese auch in Address.line angegeben werden,
@@ -58,17 +58,17 @@ Description: "This profile extends the Address data type for supporting streetna
     * ^definition = "Postfach-Adresse. Bei Angabe eines Postfaches in dieser Extension muss das Postfach auch in Address.line angegeben werden,
       um die Interoperabilität mit Systemen zu gewährleisten, die diese Extension nicht verwenden. 
       Eine Postfach-Adresse darf nicht in Verbindung mit Address.type `physical` oder `both` verwendet werden."
-* city MS 
+* city  
   * ^short = "Stadt"
   * ^comment = "**Begründung Obligation:** Ohne diese Angabe ist die Adresse nicht zustellbar."
   * insert obligation(#SHALL:populate, $creator-isik)
   * insert obligation(#SHALL:handle, $consumer-isik)
-* postalCode MS
+* postalCode 
   * ^short = "Postleitzahl"
   * ^comment = "**Begründung Obligation:** Ohne diese Angabe ist die Adresse nicht zustellbar."
   * insert obligation(#SHALL:populate, $creator-isik)
   * insert obligation(#SHALL:handle, $consumer-isik)
-* country MS
+* country 
   * ^short = "Land"
   * ^comment = "**Begründung Obligation:** Ohne diese Angabe ist die Adresse nicht zustellbar."
   * insert obligation(#SHALL:populate, $creator-isik)

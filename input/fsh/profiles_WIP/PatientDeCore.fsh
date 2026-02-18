@@ -235,6 +235,11 @@ Description: "Dieses Profil spezifiziert die Minimalanforderungen für die Berei
   * ^short = "Postfachadresse"
   * ^definition = "Hier werden Angaben zu einem Postfach gemacht. Es handelt sich um eine Adresse, die nur für postalische Zustellung genutzt werden kann."
 * maritalStatus ^short = "Personenstand"
+  * ^comment = "Begründung Obligation: Beispiel für mögliche Einsatzgebiete der Obligations."
+  * insert obligation(#SHALL:ignore, https://fhir.prototype.de/ActorDefinition/ambulant-erp)
+  * insert obligation(#MAY:able-to-populate, https://fhir.prototype.de/ActorDefinition/stationaer-kbv-erp)
+  * insert obligation(#SHOULD:in-narrative, https://fhir.prototype.de/ActorDefinition/stationaer-isik)
+  * insert obligation(#SHALL:exclude-narrative, https://fhir.prototype.de/ActorDefinition/forschung-mii-icu)
 * maritalStatus ^definition = "Hier wird der Personenstand (Familienstand) der behandelten Person angegeben."
   * coding.system 1..
   * coding.code 1..
@@ -260,4 +265,3 @@ Description: "Dieses Profil spezifiziert die Minimalanforderungen für die Berei
   * other
     * identifier
       * ^definition = "Logischer Verweis auf Identifier[Patientennummer]"
-  * type

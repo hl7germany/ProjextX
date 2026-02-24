@@ -23,12 +23,10 @@ James Pond (no stated gender), DoB Unknown
   "meta" : {
     "profile" : ["http://gefyra.info/training/StructureDefinition/MyPatient"]
   },
-  "name" : [
-    {
-      "family" : "Pond",
-      "given" : ["James"]
-    }
-  ]
+  "name" : [{
+    "family" : "Pond",
+    "given" : ["James"]
+  }]
 }
 
 ```

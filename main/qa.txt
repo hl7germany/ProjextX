@@ -2,8 +2,8 @@ SchulungsIG : Validation Results
 =========================================
 
 err = 0, warn = 12, info = 5
-IG Publisher Version: 2.1.0
-Generated Fri Feb 13 10:57:20 UTC 2026. FHIR version 4.0.1 for info.gefyra.training#0.1.0 (canonical = http://gefyra.info/training)
+IG Publisher Version: 2.1.1
+Generated Tue Feb 24 15:17:40 UTC 2026. FHIR version 4.0.1 for info.gefyra.training#0.1.0 (canonical = http://gefyra.info/training)
  Build Errors : 0 / 4 / 0
  /__w/ProjextX/ProjextX/fsh-generated/resources/ImplementationGuide-info.gefyra.training : 0 / 0 / 1
  /__w/ProjextX/ProjextX/fsh-generated/resources/Patient-PatientExample : 0 / 0 / 1

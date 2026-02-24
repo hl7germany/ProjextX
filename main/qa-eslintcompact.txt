@@ -20,4 +20,4 @@ Generic: line 0, col 0, Warning - The HTML fragment 'globals-table.xhtml' is not
 /__w/ProjextX/ProjextX/fsh-generated/resources/StructureDefinition-MyPatient.json: line 1, col 88280, Warning - A definition could not be found for Canonical URL 'http://fhir.de/base/ActorDefinition/Consumer' (INVALID)
 
 err = 0, warn = 12, info = 5
-IG Publisher Version: 2.1.0
+IG Publisher Version: 2.1.1

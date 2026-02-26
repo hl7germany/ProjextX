@@ -4,6 +4,7 @@
 Profile: MyPatient
 Parent: Patient
 Description: "An example profile of the Patient resource."
+
 * name 1..* MS
   * given MS
     * insert obligation(#SHOULD:populate-if-known, $creator)
@@ -11,6 +12,13 @@ Description: "An example profile of the Patient resource."
   * family MS
     * insert obligation(#SHALL:populate-if-known, $creator)
     * insert obligation(#SHALL:handle, $consumer)  
+* link 
+  * insert status(#informative)    
+
+//test:  Obligations pro Rolle in Code-Blöcken
+* name.given insert obligation(#SHALL:populate, $iProducer)  
+* name.family insert obligation(#SHALL:populate, $iProducer)  
+* birthDate insert obligation(#SHALL:populate-if-known, $iProducer)  
 
 Instance: PatientExample
 InstanceOf: MyPatient

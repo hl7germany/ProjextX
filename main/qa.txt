@@ -1,13 +1,13 @@
 SchulungsIG : Validation Results
 =========================================
 
-err = 0, warn = 12, info = 5
+err = 0, warn = 18, info = 8
 IG Publisher Version: 2.1.1
-Generated Tue Feb 24 15:21:43 UTC 2026. FHIR version 4.0.1 for info.gefyra.training#0.1.0 (canonical = http://gefyra.info/training)
+Generated Thu Feb 26 10:30:07 UTC 2026. FHIR version 4.0.1 for info.gefyra.training#0.1.0 (canonical = http://gefyra.info/training)
  Build Errors : 0 / 4 / 0
  /__w/ProjextX/ProjextX/fsh-generated/resources/ImplementationGuide-info.gefyra.training : 0 / 0 / 1
  /__w/ProjextX/ProjextX/fsh-generated/resources/Patient-PatientExample : 0 / 0 / 1
- /__w/ProjextX/ProjextX/fsh-generated/resources/StructureDefinition-MyPatient : 0 / 8 / 6
+ /__w/ProjextX/ProjextX/fsh-generated/resources/StructureDefinition-MyPatient : 0 / 14 / 9
 </table>
 == n/a ==
 WARNING: 1: The HTML fragment 'ip-statements.xhtml' is not included anywhere in the produced implementation guide
@@ -22,11 +22,20 @@ INFORMATION: StructureDefinition/MyPatient: StructureDefinition.snapshot.element
 WARNING: StructureDefinition/MyPatient: StructureDefinition.snapshot.element[16].extension[0].extension[1].value.ofType(canonical): A definition could not be found for Canonical URL 'http://fhir.de/base/ActorDefinition/Creator'
 INFORMATION: StructureDefinition/MyPatient: StructureDefinition.snapshot.element[16].extension[1].extension[2]: This element does not match any known slice defined in the profile http://hl7.org/fhir/StructureDefinition/obligation|5.2.0 (this may not be a problem, but you should check that it's not intended to match a slice)
 WARNING: StructureDefinition/MyPatient: StructureDefinition.snapshot.element[16].extension[1].extension[1].value.ofType(canonical): A definition could not be found for Canonical URL 'http://fhir.de/base/ActorDefinition/Consumer'
+INFORMATION: StructureDefinition/MyPatient: StructureDefinition.snapshot.element[16].extension[2].extension[2]: This element does not match any known slice defined in the profile http://hl7.org/fhir/StructureDefinition/obligation|5.2.0 (this may not be a problem, but you should check that it's not intended to match a slice)
+WARNING: StructureDefinition/MyPatient: StructureDefinition.snapshot.element[16].extension[2].extension[1].value.ofType(canonical): A definition could not be found for Canonical URL 'http://fhir.de/base/ActorDefinition/ISIK-Producer'
 INFORMATION: StructureDefinition/MyPatient: StructureDefinition.snapshot.element[17].extension[0].extension[2]: This element does not match any known slice defined in the profile http://hl7.org/fhir/StructureDefinition/obligation|5.2.0 (this may not be a problem, but you should check that it's not intended to match a slice)
 WARNING: StructureDefinition/MyPatient: StructureDefinition.snapshot.element[17].extension[0].extension[1].value.ofType(canonical): A definition could not be found for Canonical URL 'http://fhir.de/base/ActorDefinition/Creator'
 INFORMATION: StructureDefinition/MyPatient: StructureDefinition.snapshot.element[17].extension[1].extension[2]: This element does not match any known slice defined in the profile http://hl7.org/fhir/StructureDefinition/obligation|5.2.0 (this may not be a problem, but you should check that it's not intended to match a slice)
 WARNING: StructureDefinition/MyPatient: StructureDefinition.snapshot.element[17].extension[1].extension[1].value.ofType(canonical): A definition could not be found for Canonical URL 'http://fhir.de/base/ActorDefinition/Consumer'
+INFORMATION: StructureDefinition/MyPatient: StructureDefinition.snapshot.element[17].extension[2].extension[2]: This element does not match any known slice defined in the profile http://hl7.org/fhir/StructureDefinition/obligation|5.2.0 (this may not be a problem, but you should check that it's not intended to match a slice)
+WARNING: StructureDefinition/MyPatient: StructureDefinition.snapshot.element[17].extension[2].extension[1].value.ofType(canonical): A definition could not be found for Canonical URL 'http://fhir.de/base/ActorDefinition/ISIK-Producer'
+INFORMATION: StructureDefinition/MyPatient: StructureDefinition.snapshot.element[23].extension[0].extension[2]: This element does not match any known slice defined in the profile http://hl7.org/fhir/StructureDefinition/obligation|5.2.0 (this may not be a problem, but you should check that it's not intended to match a slice)
+WARNING: StructureDefinition/MyPatient: StructureDefinition.snapshot.element[23].extension[0].extension[1].value.ofType(canonical): A definition could not be found for Canonical URL 'http://fhir.de/base/ActorDefinition/ISIK-Producer'
 WARNING: StructureDefinition/MyPatient: StructureDefinition.differential.element[2].extension[0].extension[1].value.ofType(canonical): A definition could not be found for Canonical URL 'http://fhir.de/base/ActorDefinition/Creator'
 WARNING: StructureDefinition/MyPatient: StructureDefinition.differential.element[2].extension[1].extension[1].value.ofType(canonical): A definition could not be found for Canonical URL 'http://fhir.de/base/ActorDefinition/Consumer'
+WARNING: StructureDefinition/MyPatient: StructureDefinition.differential.element[2].extension[2].extension[1].value.ofType(canonical): A definition could not be found for Canonical URL 'http://fhir.de/base/ActorDefinition/ISIK-Producer'
 WARNING: StructureDefinition/MyPatient: StructureDefinition.differential.element[3].extension[0].extension[1].value.ofType(canonical): A definition could not be found for Canonical URL 'http://fhir.de/base/ActorDefinition/Creator'
 WARNING: StructureDefinition/MyPatient: StructureDefinition.differential.element[3].extension[1].extension[1].value.ofType(canonical): A definition could not be found for Canonical URL 'http://fhir.de/base/ActorDefinition/Consumer'
+WARNING: StructureDefinition/MyPatient: StructureDefinition.differential.element[3].extension[2].extension[1].value.ofType(canonical): A definition could not be found for Canonical URL 'http://fhir.de/base/ActorDefinition/ISIK-Producer'
+WARNING: StructureDefinition/MyPatient: StructureDefinition.differential.element[4].extension[0].extension[1].value.ofType(canonical): A definition could not be found for Canonical URL 'http://fhir.de/base/ActorDefinition/ISIK-Producer'

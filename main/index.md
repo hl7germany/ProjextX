@@ -8,7 +8,7 @@
 | | |
 | :--- | :--- |
 | *Official URL*:http://gefyra.info/training/ImplementationGuide/info.gefyra.training | *Version*:0.1.0 |
-| Draft as of 2026-02-24 | *Computable Name*:SchulungsIG |
+| Draft as of 2026-02-26 | *Computable Name*:SchulungsIG |
 
 # SchulungsIG
 
@@ -26,7 +26,7 @@ Feel free to modify this index page with your own awesome content!
   "version" : "0.1.0",
   "name" : "SchulungsIG",
   "status" : "draft",
-  "date" : "2026-02-24T15:20:34+00:00",
+  "date" : "2026-02-26T10:28:37+00:00",
   "publisher" : "Gefyra GmbH",
   "contact" : [{
     "name" : "Gefyra GmbH",

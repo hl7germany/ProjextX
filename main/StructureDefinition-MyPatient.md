@@ -9,7 +9,7 @@
 | | |
 | :--- | :--- |
 | *Official URL*:http://gefyra.info/training/StructureDefinition/MyPatient | *Version*:0.1.0 |
-| Draft as of 2026-02-24 | *Computable Name*:MyPatient |
+| Draft as of 2026-02-26 | *Computable Name*:MyPatient |
 
  
 An example profile of the Patient resource. 
@@ -40,7 +40,7 @@ Other representations of profile: [CSV](StructureDefinition-MyPatient.csv), [Exc
   "version" : "0.1.0",
   "name" : "MyPatient",
   "status" : "draft",
-  "date" : "2026-02-24T15:20:34+00:00",
+  "date" : "2026-02-26T10:28:37+00:00",
   "publisher" : "Gefyra GmbH",
   "contact" : [{
     "name" : "Gefyra GmbH",
@@ -115,6 +115,17 @@ Other representations of profile: [CSV](StructureDefinition-MyPatient.csv), [Exc
           "valueCanonical" : "http://fhir.de/base/ActorDefinition/Consumer"
         }],
         "url" : "http://hl7.org/fhir/StructureDefinition/obligation"
+      },
+      {
+        "extension" : [{
+          "url" : "code",
+          "valueCode" : "SHALL:populate"
+        },
+        {
+          "url" : "actor",
+          "valueCanonical" : "http://fhir.de/base/ActorDefinition/ISIK-Producer"
+        }],
+        "url" : "http://hl7.org/fhir/StructureDefinition/obligation"
       }],
       "path" : "Patient.name.family",
       "mustSupport" : true
@@ -142,9 +153,43 @@ Other representations of profile: [CSV](StructureDefinition-MyPatient.csv), [Exc
           "valueCanonical" : "http://fhir.de/base/ActorDefinition/Consumer"
         }],
         "url" : "http://hl7.org/fhir/StructureDefinition/obligation"
+      },
+      {
+        "extension" : [{
+          "url" : "code",
+          "valueCode" : "SHALL:populate"
+        },
+        {
+          "url" : "actor",
+          "valueCanonical" : "http://fhir.de/base/ActorDefinition/ISIK-Producer"
+        }],
+        "url" : "http://hl7.org/fhir/StructureDefinition/obligation"
       }],
       "path" : "Patient.name.given",
       "mustSupport" : true
+    },
+    {
+      "id" : "Patient.birthDate",
+      "extension" : [{
+        "extension" : [{
+          "url" : "code",
+          "valueCode" : "SHALL:populate-if-known"
+        },
+        {
+          "url" : "actor",
+          "valueCanonical" : "http://fhir.de/base/ActorDefinition/ISIK-Producer"
+        }],
+        "url" : "http://hl7.org/fhir/StructureDefinition/obligation"
+      }],
+      "path" : "Patient.birthDate"
+    },
+    {
+      "id" : "Patient.link",
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status",
+        "valueCode" : "informative"
+      }],
+      "path" : "Patient.link"
     }]
   }
 }

@@ -1,6 +1,6 @@
 Profile: DatatypeContactpointTIMessengerID
 Parent: ContactPoint
-Id: DatatypeContactpointTIMessengerID
+Id: Datatype-Contactpoint-TI-Messenger-ID
 Title: "TI-Messenger-ID"
 Description: "Matrix-ID (MXID) für TI-Messenger im Versichertenstammdatenmanagement (VSDM) 2.0"
 * ^url = "https://fhir.prototype.de/StructureDefinition/DatatypeContactpointTIMessengerID"

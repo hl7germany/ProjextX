@@ -1,11 +1,7 @@
-# FHIR IG Publisher Dev Container
+# ProjectX
 
-[![License](https://img.shields.io/github/license/Gefyra/IGPublisherDevContainer)](https://github.com/Gefyra/IGPublisherDevContainer/blob/main/LICENSE)
-[![Docker Image](https://img.shields.io/badge/docker-ghcr.io-blue)](https://github.com/Gefyra/IGPublisherDevContainer/pkgs/container/igpublisher-devcontainer)
-[![GitHub issues](https://img.shields.io/github/issues/Gefyra/IGPublisherDevContainer)](https://github.com/Gefyra/IGPublisherDevContainer/issues)
-[![GitHub stars](https://img.shields.io/github/stars/Gefyra/IGPublisherDevContainer)](https://github.com/Gefyra/IGPublisherDevContainer/stargazers)
-[![Dev Container](https://img.shields.io/badge/Dev%20Container-Ready-green)](https://code.visualstudio.com/docs/devcontainers/containers)
-[![Codespaces](https://img.shields.io/badge/Codespaces-Ready-brightgreen)](https://github.com/features/codespaces)
+CI Build of main branch:
+https://hl7germany.github.io/ProjextX/main/
 
 A ready-to-use development container for building FHIR Implementation Guides (IGs) with SUSHI and the IG Publisher.
 

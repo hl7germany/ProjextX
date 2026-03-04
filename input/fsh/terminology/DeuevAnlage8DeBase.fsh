@@ -1,8 +1,8 @@
-ValueSet: DeuevAnlage8DeCore
-Id: Deuev-Anlage-8-De-Core
+ValueSet: DeuevAnlage8DeBase
+Id: Deuev-Anlage-8-De-Base
 Title: "Land/Wohnsitzländercode"
 Description: "Dieses Valueset enthält die Codes zur Beschreibung von Land/Wohnsitzländercode."
-* ^url = "https://fhir.prototype.de/ValueSet/DeuevAnlage8DeCore"
+* ^url = "https://fhir.prototype.de/ValueSet/DeuevAnlage8DeBase"
 * insert Meta
 * ^immutable = false
 * $anlage-8-laenderkennzeichen#AFG "Afghanistan"

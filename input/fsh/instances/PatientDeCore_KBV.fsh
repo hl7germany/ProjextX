@@ -13,12 +13,12 @@ Usage: #example
 * identifier[=].system = "http://fhir.de/sid/gkv/kvid-10"
 * identifier[=].value = "K004567123"
 * identifier[+].type.coding[0] = $identifier-type-de-basis#PKV
-* identifier[=].type.coding[+] = https://fhir.prototype.de/CodeSystem/IdentifierTypeDeCore#pkv-nr "Private Krankenversicherung"
+* identifier[=].type.coding[+] = https://fhir.prototype.de/CodeSystem/IdentifierTypeDeBase#pkv-nr "Private Krankenversicherung"
 * identifier[=].value = "123456"
 * identifier[=].assigner.display = "XYZ Medical Clinic"
 * identifier[+].type = $v2-0203#PPN "Passport number"
 * identifier[=].value = "L388G569"
-* identifier[+].type = https://fhir.prototype.de/CodeSystem/IdentifierTypeDeCore#kvk "Krankenversichertenkarte"
+* identifier[+].type = https://fhir.prototype.de/CodeSystem/IdentifierTypeDeBase#kvk "Krankenversichertenkarte"
 * identifier[=].system = "http://fhir.de/sid/gkv/kvk-versichertennummer"
 * identifier[=].value = "123456784"
 * identifier[=].assigner.display = "XYZ Medical Clinic"
@@ -32,8 +32,10 @@ Usage: #example
 * name[=].family.extension.url = "http://hl7.org/fhir/StructureDefinition/humanname-own-name"
 * name[=].family.extension.valueString = "Gonzales"
 * name[=].family = "Gonzales"
-* telecom.system = #phone
-* telecom.value = "0172 8611693"
+* telecom[0].system = #phone
+* telecom[=].value = "0172 8611693"
+* telecom[+].system = #url
+* telecom[=].value = "example.patient.org"
 * gender.extension.url = "http://fhir.de/StructureDefinition/gender-amtlich-de"
 * gender.extension.valueCoding = $gender-amtlich-de#D
 * gender = #other

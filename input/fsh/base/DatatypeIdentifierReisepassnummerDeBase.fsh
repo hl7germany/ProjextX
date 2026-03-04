@@ -1,8 +1,8 @@
-Profile: DatatypeIdentifierReisepassnummerDeCore
+Profile: DatatypeIdentifierReisepassnummerDeBase
 Parent: Identifier
-Id: Datatype-Identifier-Reisepassnummer-De-Core
+Id: Datatype-Identifier-Reisepassnummer-De-Base
 Description: "Dieses Profil bildet die Reisepassnummer einer Person ab.“"
-* ^url = "https://fhir.prototype.de/StructureDefinition/DatatypeIdentifierReisepassnummerDeCore"
+* ^url = "https://fhir.prototype.de/StructureDefinition/DatatypeIdentifierReisepassnummerDeBase"
 * insert Meta
 * . ^short = "Identifier Reisepassnummer"
 * . ^definition = "Identifierprofil für die Reisepassnummer"
